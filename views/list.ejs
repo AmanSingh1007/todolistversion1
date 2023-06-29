@@ -1,0 +1,29 @@
+
+<%- include('header'); -%>  
+
+  
+  <body>
+              <div class="box" id="heading">
+                            <h1> <%=Kindofday%>!</h1>
+              </div>
+   
+  <div class="box">
+ <%    for (var i=0;i<pitems.length;i++){%>
+               <div class="item"> 
+               <input type="checkbox">
+               <p><%=pitems[i]%></p>
+               </div>
+                           
+ <%  }%>
+
+        <form action="/" method="post">
+              <input type="text" name="itemName" placeholder="New Item" autocomplete="off">
+              <button type="submit" name="list" value="<%=Kindofday%>">+</button>
+    </form>
+             
+  </div>
+ 
+  <%- include('footer'); -%>   
+ 
+  </body>
+</html>
